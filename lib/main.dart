@@ -1,5 +1,6 @@
 import 'package:ev/Home.dart';
 import 'package:ev/signin.dart';
+import 'package:ev/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -20,6 +21,9 @@ class _appState extends State<app> {
   Widget build(BuildContext context) {
     return MaterialApp(title: 'G-Store ESPRIT', routes: {
       "/": (BuildContext context) {
+        return const SpalshScreen();
+      },
+      "/signin": (BuildContext context) {
         return const Signin();
       },
       "/home": (BuildContext context) {
